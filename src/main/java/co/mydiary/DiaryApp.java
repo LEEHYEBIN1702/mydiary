@@ -10,8 +10,8 @@ public class DiaryApp {
 	public void start() {
 		
 		//저장된 내용 읽어서 리스트에 담기
-		dao = new DiaryListDAO();	
-		
+		//dao = new DiaryListDAO();	
+		dao = new DiaryOracleDAO();
 		int menunum;
 		
 		do {
@@ -59,7 +59,7 @@ public class DiaryApp {
 		switch (menu) {
 		case 종료: end();	break;
 		case 추가: insert();	break;
-		case 수정: insert();	break;
+		case 수정: update();	break;
 		case 삭제: delete();	break;
 		case 전체조회:   selectAll(); break;
 		case 날짜로검색: selectDate(); break;
